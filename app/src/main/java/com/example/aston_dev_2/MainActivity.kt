@@ -1,9 +1,9 @@
 package com.example.aston_dev_2
 
-import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
+import android.widget.Toast
 import com.example.aston_dev_2.databinding.ActivityMainBinding
 
 
@@ -22,11 +22,22 @@ class MainActivity : AppCompatActivity() {
 
         /** Обработчики кнопок */
         with(binding) {
-            buttonHello.setOnClickListener { launchSecondActivity() }
             buttonCount.setOnClickListener {
+                toastCountAdd()
                 mCount++
                 binding.showCount.text = mCount.toString()
             }
+        }
+
+        /**
+         * Восстанавливаем состояние после пересоздания Activity
+         * (Вариант через onCreate, самостоятельно проверяем Bundle, может null)
+         */
+        if (savedInstanceState != null){
+            mCount = savedInstanceState.getInt("count")
+            binding.showCount.text = mCount.toString()
+            Log.d("MAIN_ACTIVITY", "Состояние восстановлено")
+
         }
     }
 
@@ -39,25 +50,25 @@ class MainActivity : AppCompatActivity() {
         Log.d("MAIN_ACTIVITY", "Состояние сохранено")
     }
 
-
-    /**
-     * Восстанавливаем состояние после пересоздания Activity
-     */
-    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
-        super.onRestoreInstanceState(savedInstanceState)
-        mCount = savedInstanceState.getInt("count")
-        binding.showCount.text = mCount.toString()
-        Log.d("MAIN_ACTIVITY", "Состояние восстановлено")
+    private fun toastCountAdd(){
+        val toast: Toast = Toast.makeText(
+            this, R.string.toast_message,
+            Toast.LENGTH_SHORT
+        )
+        toast.show()
     }
 
+//    /**
+//     * Восстанавливаем состояние после пересоздания Activity
+//     * (Вариант через onRestoreInstanceState, вызывается только если Bundle не null)
+//     * Отличия только в этапах жизненного цикла
+//     */
+//    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+//        super.onRestoreInstanceState(savedInstanceState)
+//        mCount = savedInstanceState.getInt("count")
+//        binding.showCount.text = mCount.toString()
+//        Log.d("MAIN_ACTIVITY", "Состояние восстановлено")
+//    }
 
-    /**
-     * Метод для запуска второй Activity
-     */
-    private fun launchSecondActivity() {
-        Log.d("MAIN_ACTIVITY", "Переход на вторую Activity")
-        val intent = Intent(this, SecondActivity::class.java)
-        intent.putExtra("count", mCount)
-        startActivity(intent)
-    }
+
 }
