@@ -1,10 +1,8 @@
 <resources>
-    <string name="app_name">Aston-dev-2</string>
+    <string name="app_name">Aston-dev-2_1</string>
     <string name="button_label_hello">SAY HELLO</string>
     <string name="button_label_count">Count</string>
     <string name="count_initial_value">0</string>
-    <string name="toast_message">Hello Toast!</string>
-
-
-    <string name="string_hello">Hello!\n</string>
+    <string name="toast_message">Add one click!</string>
+    <string name="string_hello">Hello!</string>
 </resources>

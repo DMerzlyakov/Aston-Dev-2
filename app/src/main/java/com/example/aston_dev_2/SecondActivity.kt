@@ -17,6 +17,6 @@ class SecondActivity : AppCompatActivity() {
 
         val mCount = intent.getIntExtra("count", 0)
 
-        binding.textHeader.text = getString(R.string.string_hello) + mCount.toString()
+        binding.textCounter.text = mCount.toString()
     }
 }
