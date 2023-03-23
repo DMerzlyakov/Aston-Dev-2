@@ -1,46 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
     tools:context=".MainActivity">
 
+    <EditText
+        android:id="@+id/website_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:importantForAutofill="no"
+        android:text="@string/edittext_uri"
+        android:inputType="textLongMessage"
+        tools:ignore="LabelFor" />
 
     <Button
-        android:id="@+id/button_count"
+        android:id="@+id/open_website_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/main_margin_element"
-        android:text="@string/button_label_count"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/show_count" />
-
-    <TextView
-        android:id="@+id/show_count"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="@string/count_initial_value"
-        android:textSize="@dimen/counter_text_size"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.060000002" />
+        android:layout_marginBottom="@dimen/main_bottom_margin"
+        android:text="@string/button_uri" />
 
     <EditText
-        android:id="@+id/edit_text"
-        android:layout_width="150dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="@dimen/main_margin_element"
-        android:hint="@string/edit_text_hint"
+        android:id="@+id/location_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/edittext_loc"
         android:importantForAutofill="no"
         android:inputType="textLongMessage"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_count" />
+        tools:ignore="LabelFor" />
 
-</android.support.constraint.ConstraintLayout>
+    <Button
+        android:id="@+id/open_location_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/main_bottom_margin"
+        android:text="@string/button_loc" />
+
+    <EditText
+        android:id="@+id/share_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/edittext_share"
+        android:importantForAutofill="no"
+        android:inputType="textLongMessage"
+        tools:ignore="LabelFor" />
+
+    <Button
+        android:id="@+id/share_text_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/main_bottom_margin"
+        android:text="@string/button_share" />
+
+    <Button
+        android:id="@+id/make_photo_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/main_bottom_margin"
+        android:text="@string/button_photo" />
+
+
+</LinearLayout>

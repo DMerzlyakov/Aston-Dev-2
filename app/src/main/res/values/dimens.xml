@@ -2,4 +2,5 @@
 <resources>
     <dimen name="counter_text_size">60sp</dimen>
     <dimen name="main_margin_element">20dp</dimen>
+    <dimen name="main_bottom_margin">24dp</dimen>
 </resources>

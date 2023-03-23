@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/website_edittext"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/main_bottom_margin"
+            android:importantForAutofill="no"
+            android:inputType="textLongMessage"
+            android:text="@string/edittext_uri"
+            tools:ignore="LabelFor" />
+
+
+        <Button
+            android:id="@+id/open_website_button"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="@string/button_uri" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/location_edittext"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/main_bottom_margin"
+            android:importantForAutofill="no"
+            android:inputType="textLongMessage"
+            android:text="@string/edittext_loc"
+            tools:ignore="LabelFor" />
+
+        <Button
+            android:id="@+id/open_location_button"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="@string/button_loc" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/share_edittext"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/main_bottom_margin"
+            android:importantForAutofill="no"
+            android:inputType="textLongMessage"
+            android:text="@string/edittext_share"
+            tools:ignore="LabelFor" />
+
+        <Button
+            android:id="@+id/share_text_button"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="@string/button_share" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/make_photo_button"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/main_bottom_margin"
+        android:text="@string/button_photo" />
+
+
+</LinearLayout>
