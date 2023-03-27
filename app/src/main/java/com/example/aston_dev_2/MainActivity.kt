@@ -83,7 +83,7 @@ class MainActivity : AppCompatActivity() {
 
     /** Запустить приложение камеры на телефоне для создания фото*/
     private fun makePhoto(view: View) {
-        val intent = Intent(MediaStore.ACTION_VIDEO_CAPTURE)
+        val intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
 
         startImplicitIntents(intent)
     }
